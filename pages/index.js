@@ -34,12 +34,12 @@ export default function Home() {
           </h1> 
 
           <div style={{marginTop: '15px', width: '100%', display: 'block'}}>
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4846779075023104"
-                data-ad-slot="1877334005"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+          <ins className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-4846779075023104"
+            data-ad-slot="1877334005"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
           </div>
             
           <div>
@@ -67,12 +67,12 @@ export default function Home() {
               <h3>Features to Include in a Word Counter App</h3>
               <p>A basic word counter app can be built with just a few essential features. However, more advanced functionalities can improve the user experience and provide valuable insights. Here are some features you might consider including:</p>
               <div style={{marginTop: '15px', width: '100%', display: 'block'}}>
-                <ins class="adsbygoogle"
-                    style="display:block; text-align:center;"
-                    data-ad-layout="in-article"
-                    data-ad-format="fluid"
-                    data-ad-client="ca-pub-4846779075023104"
-                    data-ad-slot="5512663971"></ins>
+                <ins className="adsbygoogle"
+                        style={{ display: 'block', textAlign: 'center' }}
+                        data-ad-layout="in-article"
+                        data-ad-format="fluid"
+                        data-ad-client="ca-pub-4846779075023104"
+                        data-ad-slot="5512663971"></ins>
                 </div>
               <ul>
                 <li><strong>Word Count:</strong> The primary feature that displays the total word count of the text input.</li>
@@ -121,11 +121,11 @@ export default function Home() {
               <p>Building a word counter app with HTML, CSS, and JavaScript is an excellent beginner project that reinforces key programming concepts. By customizing and expanding the app, you can also learn valuable techniques related to string manipulation and real-time user interface updates.</p>
 
               <div style={{marginTop: '15px', width: '100%', display: 'block'}}>
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-format="autorelaxed"
-                        data-ad-client="ca-pub-4846779075023104"
-                        data-ad-slot="4561859900"></ins>
+                <ins className="adsbygoogle"
+                    style={{ display: 'block' }}
+                    data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-4846779075023104"
+                    data-ad-slot="4561859900"></ins>
                 </div>
           </div>
       </main>
