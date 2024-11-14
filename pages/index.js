@@ -2,22 +2,33 @@
 
 import Image from "next/image";
 import styles from "../src/app/page.module.css";
+import { ResponsiveAdUnit } from 'nextjs-google-adsense';
 import React from "react";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const response = await fetch('https://api.freeaccountingtutorial.com/ad_campaigns');
+  const data = await response.json();
+  var ads = [];
+  if( ! data.is_false ) {
+    var obj = JSON.parse(data.data[0].code) ;
+
+    ads = data.data.map(x =>  JSON.parse(x.code).sponsor_data )
+    
+  }
+
+  return {
+    props: { ads }, // Pass as props to the page component
+  };
+}
+
+
+export default function Home({ads}) {
   
+   
   var [wordsCount, setWordsCount] = React.useState(1)
   var [textarea, setTextArea] = React.useState('');
 
-  React.useEffect(() => {
-    try {
-      if (window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (error) {
-      console.error("Adsense error:", error);
-    }
-  }, []);
-
-
+ 
   var callback_to_calculate = (e) => {
 
     var value = e.target.value;
@@ -33,15 +44,7 @@ export default function Home() {
             Word Counter
           </h1> 
 
-          <div style={{marginTop: '15px', width: '100%', display: 'block'}}>
-          <ins className="adsbygoogle"
-            style={{ display: 'block' }}
-            data-ad-client="ca-pub-4846779075023104"
-            data-ad-slot="1877334005"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-          </div>
-            
+          
           <div>
             <textarea 
               style={{width: '100%', minHeight: '500px', border: '1px solid #dfdfdf', padding: '15px', resize: 'vertical'}}
@@ -53,7 +56,8 @@ export default function Home() {
             Number of words: {wordsCount}
           </div>  
 
-         
+          <ResponsiveAdUnit publisherId={ads[0]['data-ad-client']} slotId={ads[0]['data-ad-slot']} type="after-home-hero" />
+
           <div className={styles.contents}>
               <p>Have you ever found yourself needing to quickly count the words in a document or block of text? A word counter app can be incredibly helpful for writers, students, and professionals who work with text and need to monitor word counts. Whether it’s for meeting essay requirements, tracking blog post lengths, or ensuring conciseness in communication, a word counter app can be a great asset.</p>
 
@@ -66,14 +70,7 @@ export default function Home() {
 
               <h3>Features to Include in a Word Counter App</h3>
               <p>A basic word counter app can be built with just a few essential features. However, more advanced functionalities can improve the user experience and provide valuable insights. Here are some features you might consider including:</p>
-              <div style={{marginTop: '15px', width: '100%', display: 'block'}}>
-                <ins className="adsbygoogle"
-                        style={{ display: 'block', textAlign: 'center' }}
-                        data-ad-layout="in-article"
-                        data-ad-format="fluid"
-                        data-ad-client="ca-pub-4846779075023104"
-                        data-ad-slot="5512663971"></ins>
-                </div>
+              
               <ul>
                 <li><strong>Word Count:</strong> The primary feature that displays the total word count of the text input.</li>
                 <li><strong>Character Count:</strong> This feature counts the number of characters, which is helpful for social media posts with character limits.</li>
@@ -83,6 +80,7 @@ export default function Home() {
                 <li><strong>Keyword Density:</strong> For SEO and keyword optimization, this feature shows how often specific words appear in the text.</li>
               </ul>
 
+              <ResponsiveAdUnit publisherId={ads[1]['data-ad-client']} slotId={ads[1]['data-ad-slot']} type="after-home-hero" />
               <h3>Building a Basic Word Counter App in JavaScript</h3>
               <p>Let’s take a look at how you could create a simple word counter app using HTML, CSS, and JavaScript. This example will keep it straightforward, focusing on word and character counting.</p>
 
@@ -103,7 +101,7 @@ export default function Home() {
               <h3>Step 3: Adding JavaScript for Word and Character Count</h3>
               <p>Now we’ll write JavaScript to update the word and character counts in real-time. This script listens for changes in the text area and updates the counts accordingly.</p>
 
-               
+               <ResponsiveAdUnit publisherId={ads[2]['data-ad-client']} slotId={ads[2]['data-ad-slot']} type="after-home-hero" />
 
               <p>This JavaScript code counts words by trimming whitespace, splitting the text by spaces, and filtering out any empty strings. The character count is simply the length of the text string. As the user types or pastes text, the event listener updates the counts instantly.</p>
 
@@ -120,13 +118,7 @@ export default function Home() {
               <p>A word counter app is a simple yet powerful tool that can be beneficial for many types of users. From writers to students, and even marketers, tracking word count is essential for meeting content length requirements and improving readability. With this guide, you have a basic structure to start with, and you can expand it by adding more advanced features like readability scores and keyword density calculations.</p>
               <p>Building a word counter app with HTML, CSS, and JavaScript is an excellent beginner project that reinforces key programming concepts. By customizing and expanding the app, you can also learn valuable techniques related to string manipulation and real-time user interface updates.</p>
 
-              <div style={{marginTop: '15px', width: '100%', display: 'block'}}>
-                <ins className="adsbygoogle"
-                    style={{ display: 'block' }}
-                    data-ad-format="autorelaxed"
-                    data-ad-client="ca-pub-4846779075023104"
-                    data-ad-slot="4561859900"></ins>
-                </div>
+               <ResponsiveAdUnit publisherId={ads[3]['data-ad-client']} slotId={ads[3]['data-ad-slot']} type="after-home-hero" />
           </div>
       </main>
       <footer className={styles.footer}>
