@@ -103,6 +103,20 @@ a.secondary {
   align-items: center;
   gap: 8px;
 }
+.contents {
+  line-height: 1.8;
+} 
+.contents > * {
+  margin-bottom: 15px;
+  color: #222;
+}
+.contents p {
+   font-size: 16px;
+}
+
+.contents ul {
+  padding: 5px 20px;
+}
 
 .footer img {
   flex-shrink: 0;
@@ -166,3 +180,6 @@ a.secondary {
     filter: invert();
   }
 }
+
+
+
