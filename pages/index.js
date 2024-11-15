@@ -1,11 +1,12 @@
+
 // External Imports
 import React, { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-import AdSenseUnit from "../components/AdSebseUnit"
-
+ 
+const AdSenseUnit = dynamic(() => import('../components/AdSebseUnit'), { ssr: false });
 
 // Internal Imports
 import styles from "../src/app/page.module.css";
