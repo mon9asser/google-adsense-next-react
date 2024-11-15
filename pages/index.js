@@ -49,13 +49,17 @@ export default function Home({ ads, adsReady }) {
         <div className={styles.col1}>
 
            
-          <AdSenseUnit 
-            style={{display:'block'}}
-            data-ad-client="ca-pub-4846779075023104"
-            data-ad-slot="4803372793"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
+     crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-4846779075023104"
+          data-ad-slot="4803372793"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
 
           {/* Placeholder Image */}
           <img
@@ -224,6 +228,18 @@ export default function Home({ ads, adsReady }) {
               professionals who work with text and need to monitor word counts. Whether it’s for
               meeting essay requirements, tracking blog post lengths, or ensuring conciseness in
               communication, a word counter app can be a great asset.
+
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
+          crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4846779075023104"
+                data-ad-slot="1877334005"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
             </p>
         </div>
       </main>
