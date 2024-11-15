@@ -1,3 +1,4 @@
+"use client";
 
 // External Imports
 import React, { useState } from "react";
@@ -70,6 +71,19 @@ export default function Home({ ads, adsReady }) {
               placeholder="Insert your article or text here"
             ></textarea>
           </div>
+
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
+     crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+          style={{display:"block"}}
+          data-ad-client="ca-pub-4846779075023104"
+          data-ad-slot="4803372793"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
           <div>Number of words: {wordsCount}</div>
            
           {/* Article Content */}
