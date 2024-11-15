@@ -1,24 +1,36 @@
-// pages/_app.js
-import { GoogleAdSense } from "nextjs-google-adsense";
+import react from "react";
+import AdSense from "../components/AdSense"; 
 import Script from "next/script";
 
-const App = ({ Component, pageProps }) => {
+function MyApp({ Component, pageProps }) {
   
-  var publisher_id = 'ca-pub-4846779075023104';
+  const [adsReady, setAdsReady] = react.useState(false);
+
+  react.useEffect(() => {
+    if (typeof window !== "undefined" && window.adsbygoogle) {
+      setAdsReady(true);
+    }
+  }, []);
 
 
   return (
     <>
-
-<Script
+      {/* Add AdSense script globally */} 
+      <Script
         async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
         crossOrigin="anonymous"
-        strategy="afterInteractive"
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104`}
+        strategy="afterInteractive" // Ensures the script loads after page content
+        onLoad={() =>{
+          console.log("AdSense script loaded globally");
+          setAdsReady(true);
+        }}
       />
-     	 <Component {...pageProps} />
+
+      {/* Render page-specific components */}
+      <Component {...pageProps}  adsReady={adsReady} />
     </>
   );
-};
+}
 
-export default App;
+export default MyApp;
