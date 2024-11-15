@@ -52,7 +52,7 @@ export default function Home({ ads, adsReady }) {
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
      crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
-          style="display:block"
+          style={{display:"block"}}
           data-ad-client="ca-pub-4846779075023104"
           data-ad-slot="4803372793"
           data-ad-format="auto"
@@ -232,7 +232,7 @@ export default function Home({ ads, adsReady }) {
               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
           crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
-                style="display:block"
+                style={{display:"block"}}
                 data-ad-client="ca-pub-4846779075023104"
                 data-ad-slot="1877334005"
                 data-ad-format="auto"
