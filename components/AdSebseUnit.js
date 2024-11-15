@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 
 import { useEffect } from "react";
 
@@ -17,9 +18,22 @@ var AdSenseUnit = ({adsReady, ...props}) => {
         }
       }, [adsReady]);
         
-    return (<ins className="adsbygoogle"{...props}></ins>);
+    return (
+
+        <>
+            <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
+                crossOrigin="anonymous"
+            ></script>
+            <ins className="adsbygoogle" {...props}></ins>
+            <script>
+                {(adsbygoogle = window.adsbygoogle || []).push({})}
+            </script>
+        </>
+    );
 
 }
 
 
-export {AdSenseUnit}
+export default AdSenseUnit

@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-import { AdSenseUnit } from "../components/AdSebseUnit";
+import dynamic from "next/dynamic";
+
+const AdSenseUnit = dynamic(() => import("../components/AdSebseUnit"), { ssr: false });
+
+
 // Internal Imports
 import styles from "../src/app/page.module.css";
 
@@ -45,7 +49,7 @@ export default function Home({ ads, adsReady }) {
         <div className={styles.col1}>
 
           <AdSenseUnit
-            adsReady={adsReady} 
+             
             data-ad-client="ca-pub-4846779075023104"
             data-ad-slot="4803372793"
             data-ad-format="auto"
@@ -76,7 +80,7 @@ export default function Home({ ads, adsReady }) {
           </div>
           <div>Number of words: {wordsCount}</div>
           <AdSenseUnit
-            adsReady={adsReady} 
+             
             data-ad-client="ca-pub-4846779075023104"
             data-ad-slot="3681862813"
             data-ad-format="auto"
@@ -96,7 +100,7 @@ export default function Home({ ads, adsReady }) {
               communication, a word counter app can be a great asset.
             </p>
             <AdSenseUnit
-            adsReady={adsReady} 
+             
             data-ad-format="autorelaxed"
             data-ad-client="ca-pub-4846779075023104"
             data-ad-slot="4561859900"
@@ -113,7 +117,19 @@ export default function Home({ ads, adsReady }) {
               core, however, it’s focused on word counting to help users easily stay on top of text
               length requirements or targets.
             </p>
-
+            
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
+                crossorigin="anonymous"></script>
+      
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4846779075023104"
+                data-ad-slot="4803372793"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
             <h3>Why Use a Word Counter App?</h3>
             <p>
               The most obvious use of a word counter app is for writers who need to hit specific
@@ -184,7 +200,7 @@ export default function Home({ ads, adsReady }) {
               communication, a word counter app can be a great asset.
             </p>
             <AdSenseUnit
-            adsReady={adsReady} 
+             
             data-ad-client="ca-pub-4846779075023104"
             data-ad-slot="4360661570"
             data-ad-format="auto"
