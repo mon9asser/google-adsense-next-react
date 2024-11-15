@@ -9,12 +9,10 @@ import styles from "../src/app/page.module.css";
 // Fetch Data with getServerSideProps
 export async function getServerSideProps() {
   try {
-    const response = await axios.get("https://api.freeaccountingtutorial.com/ad_campaigns");
-    const data = response.data;
-    const ads = data.is_false ? [] : data.campaigns;
+     
 
     console.log(ads);
-    return { props: { ads } };
+    return { props: { ads: [] } };
   } catch (error) {
     console.error("Axios request failed:", error.message);
     console.error("Error details:", error.stack);
