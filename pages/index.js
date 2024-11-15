@@ -4,7 +4,7 @@ import axios from "axios";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const AdSenseUnit = dynamic(() => import("../components/AdSebseUnit"), { ssr: false });
+import AdSenseUnit from "../components/AdSebseUnit"
 
 
 // Internal Imports
@@ -48,18 +48,15 @@ export default function Home({ ads, adsReady }) {
         {/* Column 1: Main Content */}
         <div className={styles.col1}>
 
-          <AdSenseUnit
-             
+           
+          <AdSenseUnit 
+            style={{display:'block'}}
             data-ad-client="ca-pub-4846779075023104"
             data-ad-slot="4803372793"
             data-ad-format="auto"
             data-full-width-responsive="true"
-            style={{
-              display: "block",
-              width: "100%", // Adjust based on your layout     
-            }}
           />
-          
+
           {/* Placeholder Image */}
           <img
             className="img"
@@ -79,17 +76,7 @@ export default function Home({ ads, adsReady }) {
             ></textarea>
           </div>
           <div>Number of words: {wordsCount}</div>
-          <AdSenseUnit
-             
-            data-ad-client="ca-pub-4846779075023104"
-            data-ad-slot="3681862813"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-            style={{
-              display: "block",
-              width: "100%", // Adjust based on your layout   
-            }}
-          />
+           
           {/* Article Content */}
           <div className={styles.contents}>
             <p>
@@ -99,16 +86,7 @@ export default function Home({ ads, adsReady }) {
               meeting essay requirements, tracking blog post lengths, or ensuring conciseness in
               communication, a word counter app can be a great asset.
             </p>
-            <AdSenseUnit
              
-            data-ad-format="autorelaxed"
-            data-ad-client="ca-pub-4846779075023104"
-            data-ad-slot="4561859900"
-            style={{
-              display: "block",
-              width: "100%", // Adjust based on your layout      
-            }}
-          />
             <h3>What is a Word Counter App?</h3>
             <p>
               A word counter app is a simple tool that counts the number of words in a given text.
@@ -116,20 +94,10 @@ export default function Home({ ads, adsReady }) {
               for characters, sentences, paragraphs, and even offer readability insights. At its
               core, however, it’s focused on word counting to help users easily stay on top of text
               length requirements or targets.
-            </p>
+            </p> 
+
             
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
-                crossorigin="anonymous"></script>
-      
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4846779075023104"
-                data-ad-slot="4803372793"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+
             <h3>Why Use a Word Counter App?</h3>
             <p>
               The most obvious use of a word counter app is for writers who need to hit specific
@@ -145,7 +113,13 @@ export default function Home({ ads, adsReady }) {
               SEO, as maintaining optimal word counts is often essential for search engine
               optimization.
             </p>
-
+            <AdSenseUnit 
+              style={{display:'block'}}
+              data-ad-format="autorelaxed"
+              data-ad-client="ca-pub-4846779075023104"
+              data-ad-slot="4561859900"
+              data-full-width-responsive="true"
+            />
             <h3>Features to Include in a Word Counter App</h3>
             <p>
               A basic word counter app can be built with just a few essential features. However,
@@ -199,16 +173,13 @@ export default function Home({ ads, adsReady }) {
               meeting essay requirements, tracking blog post lengths, or ensuring conciseness in
               communication, a word counter app can be a great asset.
             </p>
-            <AdSenseUnit
-             
-            data-ad-client="ca-pub-4846779075023104"
-            data-ad-slot="4360661570"
-            data-ad-format="auto"
-            data-full-width-responsive="true"            style={{
-              display: "block",
-              width: "100%", // Adjust based on your layout 
-            }}
-          />
+            
+            <AdSenseUnit 
+              style={{display:'block'}}
+              data-ad-format="autorelaxed"
+              data-ad-client="ca-pub-4846779075023104"
+              data-ad-slot="3681862813"
+            />
             <p>
               Have you ever found yourself needing to quickly count the words in a document or block
               of text? A word counter app can be incredibly helpful for writers, students, and
@@ -240,7 +211,13 @@ export default function Home({ ads, adsReady }) {
               meeting essay requirements, tracking blog post lengths, or ensuring conciseness in
               communication, a word counter app can be a great asset.
             </p>
-
+            <AdSenseUnit 
+              style={{display:'block'}}
+              data-ad-client="ca-pub-4846779075023104"
+              data-ad-slot="1877334005"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+              />
             <p>
               Have you ever found yourself needing to quickly count the words in a document or block
               of text? A word counter app can be incredibly helpful for writers, students, and
