@@ -10,6 +10,7 @@ var AdSenseUnit = function (props) {
     setIsClient(typeof window !== "undefined");
   }, []);
   
+  /*
   useEffect(() => {
     if (isClient && window.adsbygoogle && insRef.current) {
       // Initialize adsbygoogle if available
@@ -26,6 +27,7 @@ var AdSenseUnit = function (props) {
 
     }
   }, [isClient]);
+  */
 
 
   return (
