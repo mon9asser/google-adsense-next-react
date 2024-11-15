@@ -28,6 +28,13 @@ export default function Home({ads}) {
   var [wordsCount, setWordsCount] = React.useState(1)
   var [textarea, setTextArea] = React.useState('');
 
+React.useEffect(() => {
+    if (typeof window !== 'undefined' && window.adsbygoogle) {
+      // Push adsbygoogle object to initialize ads
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+  }, []);
+
  
   var callback_to_calculate = (e) => {
 
@@ -56,13 +63,21 @@ export default function Home({ads}) {
             Number of words: {wordsCount}
           </div>  
 
-          <ResponsiveAdUnit publisherId={ads[0]['data-ad-client']} slotId={ads[0]['data-ad-slot']} type="after-home-hero" />
+
 
           <div className={styles.contents}>
               <p>Have you ever found yourself needing to quickly count the words in a document or block of text? A word counter app can be incredibly helpful for writers, students, and professionals who work with text and need to monitor word counts. Whether it’s for meeting essay requirements, tracking blog post lengths, or ensuring conciseness in communication, a word counter app can be a great asset.</p>
 
               <h3>What is a Word Counter App?</h3>
-              <p>A word counter app is a simple tool that counts the number of words in a given text. This application can often do more than just count words; it may also provide counts for characters, sentences, paragraphs, and even offer readability insights. At its core, however, it’s focused on word counting to help users easily stay on top of text length requirements or targets.</p>
+
+
+<ins class="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-4846779075023104"
+     data-ad-slot="4803372793"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+          <p>A word counter app is a simple tool that counts the number of words in a given text. This application can often do more than just count words; it may also provide counts for characters, sentences, paragraphs, and even offer readability insights. At its core, however, it’s focused on word counting to help users easily stay on top of text length requirements or targets.</p>
 
               <h3>Why Use a Word Counter App?</h3>
               <p>The most obvious use of a word counter app is for writers who need to hit specific word count targets. For example, many essays, blog posts, articles, and even social media captions have word count requirements. Without a tool to count words, writers might end up underestimating or exceeding the length, leading to additional editing or rewriting.</p>
@@ -101,12 +116,19 @@ export default function Home({ads}) {
               <h3>Step 3: Adding JavaScript for Word and Character Count</h3>
               <p>Now we’ll write JavaScript to update the word and character counts in real-time. This script listens for changes in the text area and updates the counts accordingly.</p>
 
-               <ResponsiveAdUnit publisherId={ads[2]['data-ad-client']} slotId={ads[2]['data-ad-slot']} type="after-home-hero" />
+
 
               <p>This JavaScript code counts words by trimming whitespace, splitting the text by spaces, and filtering out any empty strings. The character count is simply the length of the text string. As the user types or pastes text, the event listener updates the counts instantly.</p>
 
               <h3>Extending the Word Counter App with Additional Features</h3>
-              <p>If you want to make your word counter app even more robust, consider adding the following features:</p>
+
+
+<ins class="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-4846779075023104"
+     data-ad-slot="4561859900"></ins>
+           <p>If you want to make your word counter app even more robust, consider adding the following features:</p>
 
               <ul>
                 <li><strong>Sentence Counting:</strong> You can count sentences by splitting the text based on punctuation such as periods, exclamation marks, or question marks.</li>
@@ -116,9 +138,17 @@ export default function Home({ads}) {
 
               <h3>Conclusion</h3>
               <p>A word counter app is a simple yet powerful tool that can be beneficial for many types of users. From writers to students, and even marketers, tracking word count is essential for meeting content length requirements and improving readability. With this guide, you have a basic structure to start with, and you can expand it by adding more advanced features like readability scores and keyword density calculations.</p>
+
+<ins class="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-4846779075023104"
+     data-ad-slot="1877334005"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
               <p>Building a word counter app with HTML, CSS, and JavaScript is an excellent beginner project that reinforces key programming concepts. By customizing and expanding the app, you can also learn valuable techniques related to string manipulation and real-time user interface updates.</p>
 
-               <ResponsiveAdUnit publisherId={ads[3]['data-ad-client']} slotId={ads[3]['data-ad-slot']} type="after-home-hero" />
+
           </div>
       </main>
       <footer className={styles.footer}>
