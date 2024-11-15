@@ -9,7 +9,7 @@ var AdSenseUnit = function (props) {
   useEffect(() => { 
     setIsClient(typeof window !== "undefined");
   }, []);
-
+  
   useEffect(() => {
     if (isClient && window.adsbygoogle && insRef.current) {
       // Initialize adsbygoogle if available
@@ -29,7 +29,14 @@ var AdSenseUnit = function (props) {
 
 
   return (
+   <>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846779075023104"
+     crossorigin="anonymous"></script>
     <ins ref={insRef} className="adsbygoogle" {...props}></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+   </>
   );
   
 }
