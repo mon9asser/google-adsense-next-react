@@ -64,7 +64,7 @@ export default function Home() {
           }
         `}</style>
       </Head>
-
+    
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div className="container">
@@ -108,7 +108,13 @@ export default function Home() {
           </div>
         </div>
       </nav>
-
+      {/* Ad Box 1 */}
+      <div className="container my-5">
+        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
+          <p className="mb-0">Ad Box 1 (Responsive)</p>
+        </div>
+      </div>
+      
       {/* Banner */}
       <div className="container section">
         <div className="row align-items-center">
@@ -129,7 +135,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      {/* Ad Box 2 */}
+      <div className="container my-5">
+        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
+          <p className="mb-0">Ad Box 2 (Responsive)</p>
+        </div>
+      </div>
       {/* Section Three */}
       <div className="container section">
         <h2 className="text-center mb-5">Latest Posts</h2>
@@ -149,6 +160,13 @@ export default function Home() {
               <p className="small">{post.excerpt}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Ad Box 3 */}
+      <div className="container my-5">
+        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
+          <p className="mb-0">Ad Box 3 (Responsive)</p>
         </div>
       </div>
 
