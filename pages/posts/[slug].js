@@ -1,5 +1,8 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import GoogleAdSense from '../../components/GoogleAdSense';
+import Conf from '../../components/conf';
+
 
 const posts = [
     {
@@ -572,7 +575,7 @@ export async function getStaticProps({ params }) {
   return { props: { post } };
 }
 
-export default function PostPage({ post }) {
+export default function PostPage({ post, adsReady }) {
   const router = useRouter();
 
   if (!post) return <div>Loading...</div>;
@@ -631,7 +634,13 @@ export default function PostPage({ post }) {
      {/* Ad Box 1 */}
      <div className="container my-5">
             <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
-            <p className="mb-0">Ad Box 1 (Responsive)</p>
+                <GoogleAdSense 
+                    adsReady={adsReady}
+                    data-ad-client={Conf.account}
+                    data-ad-slot="4360661570"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"
+                />
             </div>
         </div>
       {/* Banner */}
@@ -650,7 +659,14 @@ export default function PostPage({ post }) {
             {/* Ad Box 1 */}
             <div className="container my-5">
                 <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: 'auto' }}>
-                <p className="mb-0">Ad Box 1 (Responsive)</p>
+                    <GoogleAdSense 
+                        adsReady={adsReady}
+                        style={{display:'block', textAlign:'center'}}
+                        data-ad-layout="in-article"
+                        data-ad-format="fluid"
+                        data-ad-client={Conf.account}
+                        data-ad-slot="5512663971"
+                    />
                 </div>
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -659,11 +675,12 @@ export default function PostPage({ post }) {
             {/* Ad Box 1 */}
             <div className="container my-5">
                 <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: 'auto' }}>
-                Muscle recovery is an essential aspect of any fitness journey. Whether you're lifting weights, running marathons, or engaging in yoga, your muscles undergo stress during exercise. This stress leads to tiny tears in the muscle fibers, which are repaired during the recovery phase, resulting in stronger and more resilient muscles.
-
-                While rest and hydration are crucial, nutrition plays a central role in optimizing recovery. Certain foods, known as superfoods, are packed with nutrients that help reduce inflammation, repair muscle tissue, and enhance overall performance. In this article, we’ll explore the best superfoods to include in your diet to accelerate recovery and take your fitness to the next level.
-
-
+                    <GoogleAdSense 
+                        adsReady={adsReady}
+                        data-ad-client={Conf.account}
+                        style={{width:'200px', height:'500px'}}
+                        data-ad-slot="4360661570" 
+                    /> 
                 </div>
             </div>
         </div>
@@ -672,7 +689,13 @@ export default function PostPage({ post }) {
         {/* Ad Box 1 */}
         <div className="container my-5">
                 <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
-                <p className="mb-0">Ad Box 1 (Responsive)</p>
+                    <GoogleAdSense 
+                        adsReady={adsReady}
+                        data-ad-client={Conf.account}
+                        data-ad-slot="8989537267"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"
+                    />
                 </div>
             </div>
       {/* Footer */}

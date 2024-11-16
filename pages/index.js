@@ -1,7 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import GoogleAdSense from '../components/GoogleAdSense';
+import conf from '../components/conf';
 
-export default function Home() {
+export default function Home({adsReady}) {
+
+ 
   // Post data with slugs and new Unsplash images
   const posts = [
     {
@@ -110,11 +114,17 @@ export default function Home() {
       </nav>
       {/* Ad Box 1 */}
       <div className="container my-5">
-        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
-          <p className="mb-0">Ad Box 1 (Responsive)</p>
+        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: 'auto' }}>
+          <GoogleAdSense 
+            adsReady={adsReady}
+            data-ad-client={conf.account}
+            data-ad-slot="4803372793"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
         </div>
       </div>
-      
+
       {/* Banner */}
       <div className="container section">
         <div className="row align-items-center">
@@ -137,8 +147,14 @@ export default function Home() {
       </div>
       {/* Ad Box 2 */}
       <div className="container my-5">
-        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
-          <p className="mb-0">Ad Box 2 (Responsive)</p>
+        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: 'auto' }}>
+          <GoogleAdSense 
+            adsReady={adsReady}
+            data-ad-client={conf.account}
+            data-ad-slot="3681862813"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
         </div>
       </div>
       {/* Section Three */}
@@ -165,8 +181,14 @@ export default function Home() {
 
       {/* Ad Box 3 */}
       <div className="container my-5">
-        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: '150px' }}>
-          <p className="mb-0">Ad Box 3 (Responsive)</p>
+        <div className="bg-danger text-white d-flex align-items-center justify-content-center" style={{ height: 'auto' }}>
+        <GoogleAdSense 
+            adsReady={adsReady}
+            data-ad-client={conf.account}
+            data-ad-slot="4561859900"
+            data-ad-format="autorelaxed"
+            data-full-width-responsive="true"
+          />
         </div>
       </div>
 
